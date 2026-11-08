@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mervat Tamer Abassy — NLP Researcher</title>
-<meta name="description" content="Mervat Tamer Abassy — NLP researcher at MBZUAI working on machine-generated text detection, interpretability, and multilingual NLP.">
+<meta name="description" content="Mervat Tamer Abassy — NLP researcher at MBZUAI working on LLM interpretability, human cognition in language models, machine-generated text detection, and multilingual NLP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -122,7 +122,7 @@
   /* Timeline */
   .timeline{position:relative;padding-left:26px}
   .timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .item{position:relative;margin-bottom:30px}
+  .item{position:relative;margin-bottom:20px}
   .item::before{content:"";position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--sage);border:3px solid var(--bg)}
   .item .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline}
   .item .role{font-weight:600;font-size:1.05rem;color:var(--ink)}
@@ -146,6 +146,27 @@
   ul.clean .vname::before{content:"\273F";color:var(--sage);font-size:.9rem}
   ul.clean .meta{color:var(--terra-deep);font-size:.85rem;white-space:nowrap;font-weight:500}
 
+
+  /* News */
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:700px){.news-grid{grid-template-columns:1fr}}
+  .news-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(120,95,70,.05);transition:transform .15s ease,box-shadow .15s ease}
+  .news-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .news-card figure{aspect-ratio:4/3;background:var(--bg-soft);overflow:hidden}
+  .news-card figure img{width:100%;height:100%;object-fit:cover;display:block}
+  .news-card figure.tile{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:linear-gradient(135deg,var(--bg-soft),#f6e3d6);text-align:center}
+  .tile-kicker{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-deep)}
+  .tile-venue{font-family:'Fraunces',serif;font-weight:600;font-size:2.4rem;color:var(--terra-deep);line-height:1.1}
+  .tile-track{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--ink-soft)}
+  .tile-sprig{position:absolute;width:110px;height:110px;right:-10px;bottom:-14px;transform:rotate(150deg);opacity:.6}
+  .tile-sprig path{stroke:var(--sage);fill:none;stroke-width:1.4}
+  .tile-sprig .petal{fill:var(--terra-soft)}.tile-sprig .leaf{fill:var(--sage-soft)}
+  .news-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .news-date{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sage-deep)}
+  .news-body h3{font-size:1.12rem}
+  .news-body p{font-size:.93rem;color:var(--ink-soft)}
+  .news-links{margin-top:auto;padding-top:6px;display:flex;gap:16px;flex-wrap:wrap}
+
   footer{padding:48px 0 56px;text-align:center;border-top:1px solid var(--line);position:relative;overflow:hidden}
   footer .contact{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
   footer a{font-weight:500}
@@ -161,6 +182,7 @@
       Mervat Abassy
     </span>
     <div class="nav-links">
+      <a href="#news">News</a>
       <a href="#publications">Publications</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
@@ -189,10 +211,11 @@
         NLP Researcher
       </span>
       <h1>Mervat Tamer Abassy</h1>
-      <p class="tagline">Master's researcher at MBZUAI working on machine-generated text detection, LLM interpretability, and multilingual NLP.</p>
+      <p class="tagline">Master's researcher at MBZUAI working on LLM interpretability, human cognition in language models, machine-generated text detection, and multilingual NLP.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#publications">View publications</a>
         <a class="btn ghost" href="mailto:mervattabassy@gmail.com">Get in touch</a>
+        <a class="btn ghost" href="https://scholar.google.com/citations?hl=en&user=sHBAeRQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
         <a class="btn ghost" href="https://github.com/mervattamer" target="_blank" rel="noopener">GitHub</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/mervat-abassy-b63893277/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
@@ -200,43 +223,147 @@
   </div>
 </header>
 
+<section id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <svg class="leaf-ico" viewBox="0 0 24 24"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14Z"/></svg>
+      <h2>News</h2>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <figure><img src="news/emnlp.jpg" alt="Mervat standing in front of her poster at EMNLP 2026" loading="lazy" style="object-position:50% 42%"></figure>
+        <div class="news-body">
+          <span class="news-date">Oct 2026</span>
+          <h3>Presented at EMNLP 2026 in Budapest</h3>
+          <p>Presented our co-first-authored Findings paper, “Can Dialects Be Steered Like Languages? Sparse Neurons and Distributed Directions in Arabic LLMs”, to a busy poster session. Our Jais&nbsp;2 paper was presented at the same time in the main conference.</p>
+          <div class="news-links">
+          <a class="plink" href="https://www.linkedin.com/posts/mervat-abassy-b63893277_emnlp-nlp-research-activity-7522683413632589824-qaMJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>LinkedIn post</a>
+          <a class="plink" href="https://aclanthology.org/2026.findings-emnlp.2369/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>Paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <figure><img src="news/polyu.jpg" alt="Mervat next to the PolyU sign on campus" loading="lazy" style="object-position:50% 60%"></figure>
+        <div class="news-body">
+          <span class="news-date">Jul – Sep 2026</span>
+          <h3>Visiting researcher at PolyU, Hong Kong</h3>
+          <p>Spent three months at The Hong Kong Polytechnic University working with Dr. Emmanuele Chersoni on psycholinguistics, cognitive science and NLP.</p>
+          <div class="news-links">
+          <a class="plink" href="https://www.linkedin.com/posts/mervat-abassy-b63893277_during-the-summer-i-spent-three-months-at-activity-7518040212745220098-N8gw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>LinkedIn post</a>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <figure><img src="news/acl-talk.jpg" alt="Mervat giving a talk on her paper at ACL 2026" loading="lazy" style="object-position:18% 50%"></figure>
+        <div class="news-body">
+          <span class="news-date">Jul 2026</span>
+          <h3>Presented at ACL 2026 in San Diego</h3>
+          <p>Gave a talk on “Is Human-Like Text Liked by Humans? Multilingual Human Detection and Preference Against AI” (Main) and presented “Instruction-Guided Poetry Generation in Arabic and Its Dialects” (Findings) as a poster.</p>
+          <div class="news-links">
+          <a class="plink" href="https://aclanthology.org/2026.acl-long.639/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>Human-like text</a>
+          <a class="plink" href="https://aclanthology.org/2026.findings-acl.1931/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>Poetry generation</a>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <figure><img src="news/acl-award.jpg" alt="ACL 2026 SAC Highlight certificate for Uncovering Temporal Framing in the News" loading="lazy" style="object-position:50% 55%"></figure>
+        <div class="news-body">
+          <span class="news-date">Jul 2026</span>
+          <h3>SAC Highlight at ACL 2026</h3>
+          <p>Our paper “Uncovering Temporal Framing in the News” (ACL 2026 Main) received a Senior Area Chair Highlight, presented on the last day of the conference in San Diego.</p>
+          <div class="news-links">
+          <a class="plink" href="https://aclanthology.org/2026.acl-long.222/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>Paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <figure><img src="news/ugrip.jpg" alt="Group photo of the UGRIP 2026 interns, mentors and coordinators" loading="lazy" style="object-position:50% 60%"></figure>
+        <div class="news-body">
+          <span class="news-date">May – Jun 2026</span>
+          <h3>Coordinated MBZUAI’s undergraduate research internship</h3>
+          <p>Coordinated the 2026 cohort of MBZUAI’s Undergraduate Research Internship Program (UGRIP), supporting interns and mentors through the two-month program.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <figure><img src="news/eacl.jpg" alt="Mervat with her EACL 2026 badge at the conference venue in Rabat" loading="lazy" style="object-position:50% 45%"></figure>
+        <div class="news-body">
+          <span class="news-date">Mar 2026</span>
+          <h3>Attended EACL 2026 in Rabat</h3>
+          <p>Attended EACL 2026, the European Chapter of the ACL conference, in Rabat, Morocco.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="publications" class="feature">
   <div class="wrap">
     <div class="section-head">
       <svg class="leaf-ico" viewBox="0 0 24 24"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14Z"/></svg>
       <h2>Publications</h2>
     </div>
+    <p style="margin:-18px 0 24px;color:var(--ink-soft);font-size:.92rem">h-index 5 · i10-index 4 · <a href="https://scholar.google.com/citations?hl=en&user=sHBAeRQAAAAJ" target="_blank" rel="noopener">Google Scholar</a> (Oct 2026)</p>
+
+    <div class="pub">
+      <div class="ptitle"><a href="https://arxiv.org/abs/2610.27928" target="_blank" rel="noopener">Why Do LLMs Accept Generics? Explaining Acceptability Using Psycholinguistic and Model-Derived Factors</a></div>
+      <div class="authors"><b>M. Abassy</b>, Z. Feng, T. Kuribayashi, K. Inui, E. Chersoni · First author</div>
+      <div class="tags">
+        <span class="venue review">Preprint 2026 · Under review</span>
+        <a class="plink" href="https://arxiv.org/abs/2610.27928" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>arXiv</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="https://aclanthology.org/2026.findings-emnlp.2369/" target="_blank" rel="noopener">Can Dialects Be Steered Like Languages? Sparse Neurons and Distributed Directions in Arabic LLMs</a></div>
+      <div class="authors">K. Elozeiri*, <b>M. Abassy</b>*, O. Kallas, F. Dalvi, P. Nakov, K. Inui, N. Durrani · *Co-first author</div>
+      <div class="tags">
+        <span class="venue">Findings of EMNLP 2026</span>
+        <a class="plink" href="https://aclanthology.org/2026.findings-emnlp.2369/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>ACL Anthology</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="https://aclanthology.org/2026.emnlp-main.657/" target="_blank" rel="noopener">Jais 2: A Family of Arabic-Centric Open Large Language Models</a></div>
+      <div class="authors">Anwar et al.</div>
+      <div class="tags">
+        <span class="venue">EMNLP 2026 Main</span>
+        <a class="plink" href="https://aclanthology.org/2026.emnlp-main.657/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>ACL Anthology</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="https://aclanthology.org/2026.acl-long.222/" target="_blank" rel="noopener">Uncovering Temporal Framing in the News</a></div>
+      <div class="authors">Mahmoud et al.</div>
+      <div class="tags">
+        <span class="venue">ACL 2026 Main · SAC Highlight</span>
+        <a class="plink" href="https://aclanthology.org/2026.acl-long.222/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>ACL Anthology</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="https://aclanthology.org/2026.acl-long.639/" target="_blank" rel="noopener">Is Human-Like Text Liked by Humans? Multilingual Human Detection and Preference Against AI</a></div>
+      <div class="authors">Wang et al.</div>
+      <div class="tags">
+        <span class="venue">ACL 2026 Main</span>
+        <a class="plink" href="https://aclanthology.org/2026.acl-long.639/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>ACL Anthology</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="ptitle"><a href="https://aclanthology.org/2026.findings-acl.1931/" target="_blank" rel="noopener">Instruction-Guided Poetry Generation in Arabic and Its Dialects</a></div>
+      <div class="authors">Sadallah et al.</div>
+      <div class="tags">
+        <span class="venue">Findings of ACL 2026</span>
+        <a class="plink" href="https://aclanthology.org/2026.findings-acl.1931/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>ACL Anthology</a>
+      </div>
+    </div>
 
     <div class="pub">
       <div class="ptitle"><a href="https://aclanthology.org/2024.emnlp-demo.35/" target="_blank" rel="noopener">LLM-DetectAIve: a Tool for Fine-Grained Machine-Generated Text Detection</a></div>
-      <div class="authors"><b>Abassy</b> et al.</div>
+      <div class="authors"><b>Abassy</b> et al. · First author</div>
       <div class="tags">
         <span class="venue">EMNLP Demo 2024</span>
         <a class="plink" href="https://aclanthology.org/2024.emnlp-demo.35/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>ACL Anthology</a>
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="ptitle"><a href="https://arxiv.org/abs/2502.11614" target="_blank" rel="noopener">Is Human-Like Text Liked by Humans? Multilingual Human Detection and Preference Against AI</a></div>
-      <div class="authors">Wang et al.</div>
-      <div class="tags">
-        <span class="venue">ACL Main 2026</span>
-        <a class="plink" href="https://arxiv.org/abs/2502.11614" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>arXiv</a>
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="ptitle">Uncovering Temporal Framing in the News</div>
-      <div class="authors">Mahmoud et al.</div>
-      <div class="tags"><span class="venue">ACL Main 2026</span></div>
-    </div>
-
-    <div class="pub">
-      <div class="ptitle"><a href="https://arxiv.org/abs/2604.27766" target="_blank" rel="noopener">Instruction-Guided Poetry Generation in Arabic and Its Dialects</a></div>
-      <div class="authors">Sadallah et al.</div>
-      <div class="tags">
-        <span class="venue">ACL 2026 Findings</span>
-        <a class="plink" href="https://arxiv.org/abs/2604.27766" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>arXiv</a>
       </div>
     </div>
 
@@ -250,15 +377,12 @@
     </div>
 
     <div class="pub">
-      <div class="ptitle">Can Dialects Be Steered Like Languages? Sparse Neurons and Distributed Directions in Arabic LLMs</div>
-      <div class="authors">K. ElOzeiri, <b>M. Abassy</b> et al. · Co-first author</div>
-      <div class="tags"><span class="venue review">Under review</span></div>
-    </div>
-
-    <div class="pub">
-      <div class="ptitle">Jais 2: A Family of Arabic-Centric Open Large Language Models</div>
-      <div class="authors">Anwar et al.</div>
-      <div class="tags"><span class="venue review">Under review</span></div>
+      <div class="ptitle"><a href="https://ceur-ws.org/Vol-4038/paper_277.pdf" target="_blank" rel="noopener">Overview of the “Voight-Kampff” Generative AI Authorship Verification Task at PAN and ELOQUENT 2025</a></div>
+      <div class="authors">Bevendorff et al.</div>
+      <div class="tags">
+        <span class="venue">CLEF 2025 — Shared Task Overview</span>
+        <a class="plink" href="https://ceur-ws.org/Vol-4038/paper_277.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><path d="M10 14a4 4 0 0 0 6 .5l2-2a4 4 0 0 0-6-6l-1 1" stroke="currentColor" stroke-width="1.6"/><path d="M14 10a4 4 0 0 0-6-.5l-2 2a4 4 0 0 0 6 6l1-1" stroke="currentColor" stroke-width="1.6"/></svg>CEUR-WS</a>
+      </div>
     </div>
   </div>
 </section>
@@ -272,31 +396,39 @@
     <div class="timeline">
       <div class="item">
         <div class="row">
-          <div><span class="role">NLP Remote Research Student</span> · <span class="where">MBZUAI</span></div>
-          <span class="meta">Jul 2024 — Present</span>
+          <div><span class="role">Visiting Researcher</span> · <span class="where">The Hong Kong Polytechnic University</span></div>
+          <span class="meta">Jul 2026 — Sep 2026</span>
         </div>
-        <p>Helped organize the Detecting AI-Generated Content Workshop 2024 (co-located with COLING 2025): collected and cleaned data and reviewed shared-task submissions. Research on fine-grained and multilingual machine-generated text detection; developed LLM-DetectAIve.</p>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div><span class="role">Student Coordinator, UGRIP</span> · <span class="where">MBZUAI, Abu Dhabi</span></div>
+          <span class="meta">May 2026 — Jun 2026</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div><span class="role">NLP Remote Research Student</span> · <span class="where">MBZUAI</span></div>
+          <span class="meta">Jul 2024 — Aug 2025</span>
+        </div>
       </div>
       <div class="item">
         <div class="row">
           <div><span class="role">Data Modeling Intern</span> · <span class="where">Bussma Solutions, Alexandria</span></div>
           <span class="meta">Jul 2024 — Oct 2024</span>
         </div>
-        <p>Designed and optimized data models and data-warehouse schemas. Built ER diagrams, optimized SQL queries and indexing, and prepared cross-platform DDL documentation for a SQL Server-to-MySQL migration.</p>
       </div>
       <div class="item">
         <div class="row">
           <div><span class="role">Undergraduate AI Research Intern</span> · <span class="where">MBZUAI, Abu Dhabi</span></div>
           <span class="meta">May 2024 — Jun 2024</span>
         </div>
-        <p>Selected through a 4% acceptance rate and awarded Best Team Presentation. Built a fine-grained machine-generated text detection system: collected a dataset from four text generators, cleaned the data, fine-tuned pretrained models, and implemented a classification model.</p>
       </div>
       <div class="item">
         <div class="row">
           <div><span class="role">Part-time IGCSE Tutor</span> · <span class="where">Self-employed, Alexandria</span></div>
           <span class="meta">Jul 2021 — Jun 2024</span>
         </div>
-        <p>Taught A-level and IGCSE students in Computer Science and Physics.</p>
       </div>
     </div>
   </div>
@@ -312,7 +444,8 @@
       <div class="card">
         <h3>MBZUAI</h3>
         <div class="sub">M.Sc. Natural Language Processing · Interpretability Team</div>
-        <div class="meta">CGPA 3.85 / 4.0 · Aug 2025 — Present</div>
+        <div class="meta">CGPA 3.82 / 4.0 · Aug 2025 — Present</div>
+        <div class="sub" style="margin-top:10px;margin-bottom:0">Supervised by Kentaro Inui and Preslav Nakov. Thesis: <i>Human Cognition in Language Models: Interpretability-Based Tests of Psychological Accounts</i></div>
       </div>
       <div class="card">
         <h3>Alexandria University</h3>
@@ -323,6 +456,7 @@
     <div style="margin-top:20px">
       <span class="pill">Machine-generated text detection</span>
       <span class="pill">LLM interpretability</span>
+      <span class="pill">Psycholinguistics &amp; cognition</span>
       <span class="pill">Multilingual NLP</span>
       <span class="pill">Arabic &amp; dialects</span>
       <span class="pill">Data modeling &amp; SQL</span>
@@ -355,6 +489,7 @@
     <h2 style="font-size:1.5rem;margin-bottom:14px">Let's connect</h2>
     <div class="contact">
       <a href="mailto:mervattabassy@gmail.com">mervattabassy@gmail.com</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=sHBAeRQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://github.com/mervattamer" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/mervat-abassy-b63893277/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="tel:+201019165473">+20 101 916 5473</a>
